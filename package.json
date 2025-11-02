@@ -8,6 +8,7 @@
   },
   "scripts": {
     "dev": "vite",
+    "test": "echo \"No test specified\"",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix",
