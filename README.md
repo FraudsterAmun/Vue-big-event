@@ -37,31 +37,31 @@ Vue 大事件是一个功能完善的文章内容管理系统（CMS），提供�
 ### 📱 登录注册
 
 <div align="center">
-  <img src="./screenshots/login.png" alt="登录页面" width="45%" />
-  <img src="./screenshots/register.png" alt="注册页面" width="45%" />
+  <img src="./screenshots/login.png" alt="登录页面" width="100%" />
+  <img src="./screenshots/register.png" alt="注册页面" width="100%" />
 </div>
 
 ### 📝 文章管理
 
 <div align="center">
-  <img src="./screenshots/article_type.png" alt="文章分类管理" width="45%" />
-  <img src="./screenshots/add_article_type.png" alt="新增分类" width="45%" />
+  <img src="./screenshots/article_type.png" alt="文章分类管理" width="100%" />
+  <img src="./screenshots/add_article_type.png" alt="新增分类" width="100%" />
 </div>
 
 <div align="center">
-  <img src="./screenshots/article_mang.png" alt="文章列表管理" width="45%" />
-  <img src="./screenshots/add_article_mang.png" alt="新增文章" width="45%" />
+  <img src="./screenshots/article_mang.png" alt="文章列表管理" width="100%" />
+  <img src="./screenshots/add_article_mang.png" alt="新增文章" width="100%" />
 </div>
 
 ### 👤 个人中心
 
 <div align="center">
-  <img src="./screenshots/usre_info.png" alt="个人信息管理" width="45%" />
-  <img src="./screenshots/actor.png" alt="头像管理" width="45%" />
+  <img src="./screenshots/usre_info.png" alt="个人信息管理" width="100%" />
+  <img src="./screenshots/actor.png" alt="头像管理" width="100%" />
 </div>
 
 <div align="center">
-  <img src="./screenshots/password.png" alt="密码修改" width="45%" />
+  <img src="./screenshots/password.png" alt="密码修改" width="100k%" />
 </div>
 
 ---
