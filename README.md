@@ -61,7 +61,7 @@ Vue 大事件是一个功能完善的文章内容管理系统（CMS），提供�
 </div>
 
 <div align="center">
-  <img src="./screenshots/password.png" alt="密码修改" width="100k%" />
+  <img src="./screenshots/password.png" alt="密码修改" width="100%" />
 </div>
 
 ---
