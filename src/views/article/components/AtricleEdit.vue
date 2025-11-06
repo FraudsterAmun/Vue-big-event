@@ -79,7 +79,6 @@ const openDrawer = async (row) => {
     const file = await imageUrlToFileObject(imgUrl.value, formModel.value.cover_img)
     formModel.value.cover_img = file
   } else {
-    formModel.value = { ...formDefault } // 基于默认的数据，重置form数据
     // 这里重置了表单的数据，但是图片上传img地址，富文本编辑器内容 => 需要手动重置
     imgUrl.value = ''
     editorRef.value.setHTML('')

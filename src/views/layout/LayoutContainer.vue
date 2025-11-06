@@ -100,22 +100,12 @@ const handleCommand = (command) => {
     </el-aside>
 
     <!-- 遮罩层 - 移动端点击关闭侧边栏 -->
-    <div
-      class="sidebar-overlay"
-      :class="{ 'show': showMobileSidebar }"
-      @click="closeSidebar"
-    ></div>
+    <div class="sidebar-overlay" :class="{ show: showMobileSidebar }" @click="closeSidebar"></div>
 
     <el-container>
       <el-header>
         <!-- 移动端菜单按钮 -->
-        <el-button
-          class="mobile-menu-btn"
-          text
-          @click="toggleSidebar"
-          :icon="Expand"
-        >
-        </el-button>
+        <el-button class="mobile-menu-btn" text @click="toggleSidebar" :icon="Expand"> </el-button>
 
         <div class="header-info">
           黑马程序员：<strong>{{
@@ -262,7 +252,7 @@ const handleCommand = (command) => {
         font-size: 14px;
 
         strong {
-          display: block;
+          display: inline-block;
           margin-top: 2px;
         }
       }

@@ -147,19 +147,72 @@ const addChannel = () => {
     </el-table>
 
     <!-- 分页组件 -->
-    <div style="margin-top: 20px; display: flex; justify-content: center">
-      <el-pagination
-        v-model:current-page="currentPage"
-        v-model:page-size="pageSize"
-        :page-sizes="[5, 10, 20, 50]"
-        :total="total"
-        layout="total, sizes, prev, pager, next, jumper"
-        @current-change="handleCurrentChange"
-        @size-change="handleSizeChange"
-      />
-    </div>
+    <el-pagination
+      v-model:current-page="currentPage"
+      v-model:page-size="pageSize"
+      :page-sizes="[5, 10, 20, 50]"
+      :total="total"
+      layout="total, sizes, prev, pager, next, jumper"
+      @current-change="handleCurrentChange"
+      @size-change="handleSizeChange"
+      class="channel-pagination"
+    />
   </PageContainer>
   <ChannelDialog ref="channelDialogRef" @refresh="reloadChannelData" />
 </template>
 
-<style scoped></style>
+<style scoped>
+/* 分页样式 */
+.channel-pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.channel-pagination :deep(.el-pagination) {
+  display: flex;
+  align-items: center;
+}
+
+.channel-pagination :deep(.el-pagination__total),
+.channel-pagination :deep(.el-pagination__sizes),
+.channel-pagination :deep(.btn-prev),
+.channel-pagination :deep(.btn-next),
+.channel-pagination :deep(.el-pager) {
+  display: flex;
+  align-items: center;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .channel-pagination :deep(.el-pagination) {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* 隐藏页码和跳转 */
+  .channel-pagination :deep(.el-pager),
+  .channel-pagination :deep(.el-pagination__jump) {
+    display: none !important;
+  }
+
+  /* 总条数和每页条数 */
+  .channel-pagination :deep(.el-pagination__total) {
+    display: flex;
+    align-items: center;
+  }
+
+  .channel-pagination :deep(.el-pagination__sizes) {
+    display: flex;
+    align-items: center;
+  }
+
+  .channel-pagination :deep(.btn-prev),
+  .channel-pagination :deep(.btn-next) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+</style>

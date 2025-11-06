@@ -186,7 +186,7 @@ onMounted(() => {
       :total="articleStore.articleTotal"
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
-      style="margin-top: 20px; justify-content: center"
+      class="article-pagination"
     />
 
     <!-- 文章编辑组件 -->
@@ -219,6 +219,27 @@ onMounted(() => {
   margin-left: auto;
 }
 
+/* 分页样式 */
+.article-pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.article-pagination :deep(.el-pagination) {
+  display: flex;
+  align-items: center;
+}
+
+.article-pagination :deep(.el-pagination__total),
+.article-pagination :deep(.el-pagination__sizes),
+.article-pagination :deep(.btn-prev),
+.article-pagination :deep(.btn-next),
+.article-pagination :deep(.el-pager) {
+  display: flex;
+  align-items: center;
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
   .filter-form {
@@ -234,6 +255,37 @@ onMounted(() => {
   .filter-form :deep(.el-form-item:last-child) {
     margin-left: 0;
     text-align: center;
+  }
+
+  /* 移动端分页简约样式 */
+  .article-pagination :deep(.el-pagination) {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* 隐藏页码和跳转 */
+  .article-pagination :deep(.el-pager),
+  .article-pagination :deep(.el-pagination__jump) {
+    display: none !important;
+  }
+
+  /* 总条数和每页条数 */
+  .article-pagination :deep(.el-pagination__total) {
+    display: flex;
+    align-items: center;
+  }
+
+  .article-pagination :deep(.el-pagination__sizes) {
+    display: flex;
+    align-items: center;
+  }
+
+  .article-pagination :deep(.btn-prev),
+  .article-pagination :deep(.btn-next) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 </style>
